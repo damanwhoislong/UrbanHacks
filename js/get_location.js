@@ -36,7 +36,3 @@ function setPosition(position) {
         fax_cell.innerHTML = table[i].fax;
     }
 }
-
-$(document).ready(function() {
-    getLocation()
-});
