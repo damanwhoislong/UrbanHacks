@@ -18,8 +18,8 @@ function findNearby(coordLong, coordLat){
 	// juicy stuff
 	var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
-
-		var r = 1;  // 1 km radius to search
+		// 1 km radius to search
+		var r = 1;  
 		// long and lat to km conversion
 		var longCov = 80.00;
         var latCov = 111.045;
@@ -31,7 +31,9 @@ function findNearby(coordLong, coordLat){
 				info.push({
 					'name': jsonData[i].TITLE,
                     'x': jsonData[i].LONGITUDE,
-                    'y': jsonData[i].LATITUDE
+                    'y': jsonData[i].LATITUDE,
+					'address': jsonData[i].ADDRESS,
+					'fax': jsonData[i].DESCRIPTION
                 });
             }
 			
@@ -43,8 +45,9 @@ function findNearby(coordLong, coordLat){
                     info[i].y < coordLat + (r / latCov) &&
                     info[i].y > coordLat - (r / latCov)) {
                     // check if its within the circle
-                    if (Math.pow(info[i].x - coordLong, 2) + Math.pow(info[i].y - coordLat, 2) <= Math.pow(r, 2)) {
-                        validLoc.push([info[i].name, info[i].x, info[i].y]);
+					var dist = Math.sqrt(Math.pow(info[i].x - coordLong, 2) + Math.pow(info[i].y - coordLat, 2))
+                    if (dist < r) {
+                        validLoc.push([info[i].name, dist, info[i].address, info[i].fax]);
                     }
                 }
             }
