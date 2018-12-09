@@ -79,7 +79,12 @@ function findNearby(coordLong, coordLat, r){
 				var address_cell = row.insertCell(2);
 				var fax_cell = row.insertCell(3);
 				name_cell.innerHTML = POIList[i].name;
-				dist_cell.innerHTML = Math.round(POIList[i].dist * 10)/10.0 + " km";
+				if (POIList[i].dist >= 1.0) {
+					dist_cell.innerHTML = Math.round(POIList[i].dist * 10)/10.0 + " km";
+				} else {
+					dist_cell.innerHTML = Math.round(POIList[i].dist * 10)*10 + " m";
+				}
+
 				address_cell.innerHTML = POIList[i].address;
 				fax_cell.innerHTML = POIList[i].fax;
 			}
