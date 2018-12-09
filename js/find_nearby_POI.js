@@ -1,7 +1,8 @@
 var validLoc = []; // all locations within radius
 // find all nearby POI
 var Location = {'latitude': 0.0, 'longitude': 0.0};
-var R = 2;
+var R;
+
 // get user location
 function getLocation() {
 	var x = document.getElementById("demo");
@@ -16,8 +17,8 @@ function setPosition(position) {
 	Location.latitude = position.coords.latitude;
 	Location.longitude = position.coords.longitude;
 	var x = document.getElementById("demo");
-	x.innerHTML = "Latitude: " + Location.latitude + "&#176; N" +
-	"<br/><br/><br/><br/>Longitude: " + -Location.longitude + "&#176; W";
+	x.innerHTML = "Latitude: " + Math.round(Location.latitude*1000)/1000.0 + "&#176; N" +
+	"<br/><br/><br/><br/>Longitude: " + Math.round(-Location.longitude*1000)/1000 + "&#176; W";
 	findNearby(Location.longitude, Location.latitude, R);
 }
 
@@ -59,7 +60,6 @@ function findNearby(coordLong, coordLat, r){
 					}
 				}
 			}
-			console.log(validLoc);
 			validLoc.sort((a, b) => (a.dist > b.dist) ? 1 : ((b.dist > a.dist) ? -1 : 0)); // sort by distance
 			// validLoc.sort(function(a, b) {
 			// 	if (a.dist > b.dist) return 1;
@@ -67,12 +67,15 @@ function findNearby(coordLong, coordLat, r){
 			// 	else return 0;
 			// });
 			console.log(validLoc);
-			console.log(validLoc.length);
 
 			var table =  document.getElementById("POITable");
+			// nuke old entries
+			for (var i = table.rows.length; i > 1; i--) {
+				table.deleteRow(1);
+			}
+			// make new entres
 			POIList = validLoc;
 			for (var i = 0; i < POIList.length; i++) {
-				console.log(table[i]);
 				var row = table.insertRow(i+1);
 				var name_cell = row.insertCell(0);
 				var dist_cell = row.insertCell(1);
@@ -97,6 +100,17 @@ function findNearby(coordLong, coordLat, r){
 }
 
 $(document).ready(function() {
-	getLocation()
+	//get radius
+	var slider = document.getElementById("myRange");
+	R = Math.pow(slider.value, 2) / 200;
+	var output = document.getElementById("radius");
+	output.innerHTML = Math.round(R*100)/100 + "km";
+
+	slider.oninput = function() {
+		R = Math.pow(slider.value, 2) / 200;
+		output.innerHTML = Math.round(R*100)/100.0 + " km";
+		getLocation();
+	}
+	getLocation();
 });
 // console.log(findNearby(-79.8669586, 43.25888889, 1));

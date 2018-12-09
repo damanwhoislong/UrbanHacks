@@ -16,6 +16,10 @@ img {
 	display: block;
 }
 
+#top-table td {
+    vertical-align: top;
+}
+
 h2 {
     text-align: center;
 }
@@ -33,10 +37,50 @@ p {
 	margin: 50pt;
 }
 
-#header-bottom-left {
-	height: 260px;
+.slidecontainer {
+    text-align: center;
 }
 
-th, td {
+
+#header-bottom-left {
+	height: 240px;
+}
+
+#POITable th, #POITable td {
     padding: 7px;
+}
+
+.slidecontainer {
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 50%;
+    height: 25px;
+    background: #e6e6e6;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
 }
