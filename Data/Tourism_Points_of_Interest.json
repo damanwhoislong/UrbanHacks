@@ -218,7 +218,7 @@
     "EMAIL": "",
     "TOLL_FREE": "",
     "URL": "www.staybridgehamilton.com",
-    "DESCRIPTION": "Bridging the gap of leisure traveler wants and needs, the Staybridge Suites Hamilton - Downtown is proud to offer the best of both worlds. With pool and fitness centre facilities, free wireless internet, and 129 fully equipped guest suites, the only all-suites hotel in Hamilton is strategically designed to accommodate a wide variety of groups, individual and long-term travelers.",
+    "DESCRIPTION": "Bridging the gap of leisure traveler wants and needs, the Staybridge Suites Hamilton %u2013 Downtown is proud to offer the best of both worlds. With pool and fitness centre facilities, free wireless internet, and 129 fully equipped guest suites, the only all-suites hotel in Hamilton is strategically designed to accommodate a wide variety of groups, individual and long-term travelers.",
     "OPEN_DATATOURISM_LISTINGSAREA": "",
     "LONGITUDE": -79.87636479999986,
     "LATITUDE": 43.25797469999528
@@ -714,7 +714,7 @@
     "EMAIL": "reservations@thebarracksinn.com",
     "TOLL_FREE": "",
     "URL": "www.thebarracksinn.com",
-    "DESCRIPTION": "The Barracks Inn is conveniently located within walking distance of the Ancaster Mill, a most popular wedding venue. Also within walking distance the Ancaster Village has great shopping with many boutique stores, The Spa at Ancaster, many dining options such as Cavallo Nero's, the Rousseau House restaurant and lounge, and many more. The Barracks Inn features 18 luxuriously appointed rooms, subtly blending unique period décor with the finest of modern guest amenities. This unique boutique inn will cater to the leisure and business traveller. Featuring conference/meeting/group facilities, Spa Packages, Golf Packages, Couple/Romance package, and Holiday/Winter Packages.",
+    "DESCRIPTION": "The Barracks Inn is conveniently located within walking distance of the Ancaster Mill, a most popular wedding venue. Also within walking distance the Ancaster Village has great shopping with many boutique stores, The Spa at Ancaster, many dining options such as Cavallo Nero%u2019s, the Rousseau House restaurant and lounge, and many more. The Barracks Inn features 18 luxuriously appointed rooms, subtly blending unique period décor with the finest of modern guest amenities. This unique boutique inn will cater to the leisure and business traveller. Featuring conference/meeting/group facilities, Spa Packages, Golf Packages, Couple/Romance package, and Holiday/Winter Packages.",
     "OPEN_DATATOURISM_LISTINGSAREA": "",
     "LONGITUDE": -79.97516259999993,
     "LATITUDE": 43.229530099995294
@@ -1331,7 +1331,7 @@
     "X": 591629.449,
     "Y": 4789292.194599999,
     "OBJECTID": 77,
-	"TITLE": "The Arctic Experience McNaught Gallery",
+    "TITLE": "The Arctic Experience McNaught Gallery",
     "ADDRESS": "191 James St., S., Hamilton, ON L8P 3A8",
     "PHONE": "905-522-9443",
     "FAX": "",
@@ -1946,7 +1946,7 @@
     "EMAIL": "bdyment@sympatico.ca",
     "TOLL_FREE": "",
     "URL": "www.dyments.com",
-    "DESCRIPTION": "Welcome to Glen Drummond farm, home to the Dyment family since 1887. We hope you will find the time to visit us at one of our many events that will take place this year. Whether you have a special event to celebrate or are just looking for a wonderful day in the country we offer spectacular scenery, yummy foods and \"˜farmtastic' fun for the whole family.",
+    "DESCRIPTION": "Welcome to Glen Drummond farm, home to the Dyment family since 1887. We hope you will find the time to visit us at one of our many events that will take place this year. Whether you have a special event to celebrate or are just looking for a wonderful day in the country we offer spectacular scenery, yummy foods and \"%u02DCfarmtastic' fun for the whole family.",
     "OPEN_DATATOURISM_LISTINGSAREA": "",
     "LONGITUDE": -79.94984767338943,
     "LATITUDE": 43.282198658663894
@@ -2650,7 +2650,7 @@
     "EMAIL": "military@hamilton.ca",
     "TOLL_FREE": "",
     "URL": "www.hamilton.ca/museums",
-    "DESCRIPTION": "Burlington Heights where Dundurn Castle and The Hamilton Military Museum now stand was occupied by the British military from 1813 until 1815. Blood Ties to a Gentle Landscape tells the story of the people who lived on and around Burlington Heights during the War of 1812. Located on the main floor, this exhibit showcases the historical figures of this area through documentary evidence, period artifacts as well as stories passed down from one generation to the next by their descendants. On the second floor explore the exhibit Hamilton and Scourge \"“ Sunken Sunset, view a film in our theatre space, experience life as a soldier in our Discovery Gallery and celebrate your family history in our Genealogy Gallery. While on site, don't forget to visit the First World War exhibit located in the Coach House Gallery.There is something for everyone, including games for children.",
+    "DESCRIPTION": "Burlington Heights where Dundurn Castle and The Hamilton Military Museum now stand was occupied by the British military from 1813 until 1815. Blood Ties to a Gentle Landscape tells the story of the people who lived on and around Burlington Heights during the War of 1812. Located on the main floor, this exhibit showcases the historical figures of this area through documentary evidence, period artifacts as well as stories passed down from one generation to the next by their descendants. On the second floor explore the exhibit Hamilton and Scourge \"%u201C Sunken Sunset, view a film in our theatre space, experience life as a soldier in our Discovery Gallery and celebrate your family history in our Genealogy Gallery. While on site, don't forget to visit the First World War exhibit located in the Coach House Gallery.There is something for everyone, including games for children.",
     "OPEN_DATATOURISM_LISTINGSAREA": "",
     "LONGITUDE": -79.8847110511854,
     "LATITUDE": 43.26818144378723
@@ -2730,7 +2730,7 @@
     "EMAIL": "whitehern@hamilton.ca",
     "TOLL_FREE": "",
     "URL": "www.hamilton.ca/whitehern",
-    "DESCRIPTION": "National Historic SiteExperience one of the finest examples of an intact historic home in Canada. Three generations of the McQuesten family lived at Whitehern from 1852 until 1968. Among the last generation were six children who never married. In 1959 the three surviving members of the family bequeathed the home to the City with all its original possessions. It contains elements from many time periods \"“ Georgian, Victorian and Edwardian - dating up to 1939 when the Honourable Thomas McQuesten was Minister of Highways. Explore the heritage of Victorian ideas and possessions that influenced life at Whitehern on the eve of W.W. II.",
+    "DESCRIPTION": "National Historic SiteExperience one of the finest examples of an intact historic home in Canada. Three generations of the McQuesten family lived at Whitehern from 1852 until 1968. Among the last generation were six children who never married. In 1959 the three surviving members of the family bequeathed the home to the City with all its original possessions. It contains elements from many time periods \"%u201C Georgian, Victorian and Edwardian - dating up to 1939 when the Honourable Thomas McQuesten was Minister of Highways. Explore the heritage of Victorian ideas and possessions that influenced life at Whitehern on the eve of W.W. II.",
     "OPEN_DATATOURISM_LISTINGSAREA": "",
     "LONGITUDE": -79.87201710681231,
     "LATITUDE": 43.254584682959376
@@ -2954,7 +2954,7 @@
     "EMAIL": "info@harbourwest.ca",
     "TOLL_FREE": "",
     "URL": "www.harbourwest.ca",
-    "DESCRIPTION": "Harbour West Marina offers everything you need for a pleasurable boating experience. \"“ Full service fuel dock \"“ Wifi \"“ BBQ pavilion \"“ Washrooms Laundry \"“ Bike rentals nearby Summer slips available, or just come spend the weekend with us! Make Harbour West your home base to explore everything Hamilton Has to offer!",
+    "DESCRIPTION": "Harbour West Marina offers everything you need for a pleasurable boating experience. \"%u201C Full service fuel dock \"%u201C Wifi \"%u201C BBQ pavilion \"%u201C Washrooms Laundry \"%u201C Bike rentals nearby Summer slips available, or just come spend the weekend with us! Make Harbour West your home base to explore everything Hamilton Has to offer!",
     "OPEN_DATATOURISM_LISTINGSAREA": "",
     "LONGITUDE": -79.86248879999984,
     "LATITUDE": 43.273619899995225
@@ -3242,7 +3242,7 @@
     "EMAIL": "info@flamborodowns.com",
     "TOLL_FREE": "",
     "URL": "www.flamborodowns.com",
-    "DESCRIPTION": "Welcome to Flamboro Downs \"“ regarded as one of the finest standardbred racing facilities and a great place to work! Were you aware that Flamboro Downs is home to the world record for three-year-old pacers on a half-mile track? Harness this exhilaration. Harness this excitement. Experience electronic table game devices and over 800 slot machines operated by the OLG, the atmosphere of on-site dining, bar and conferencing. There is something for everyone! In addition to offering a multi-faceted entertainment, food beverage and gaming destination on 220 acres in rural Hamilton, our ultimate goal is to provide a memorable, exciting entertainment experience to our guests and rewarding opportunities for our associates. Since its founding in 1975, Flamboro Down's management has been committed to promoting positive employee relations and service excellence 24/7.",
+    "DESCRIPTION": "Welcome to Flamboro Downs \"%u201C regarded as one of the finest standardbred racing facilities and a great place to work! Were you aware that Flamboro Downs is home to the world record for three-year-old pacers on a half-mile track? Harness this exhilaration. Harness this excitement. Experience electronic table game devices and over 800 slot machines operated by the OLG, the atmosphere of on-site dining, bar and conferencing. There is something for everyone! In addition to offering a multi-faceted entertainment, food beverage and gaming destination on 220 acres in rural Hamilton, our ultimate goal is to provide a memorable, exciting entertainment experience to our guests and rewarding opportunities for our associates. Since its founding in 1975, Flamboro Down's management has been committed to promoting positive employee relations and service excellence 24/7.",
     "OPEN_DATATOURISM_LISTINGSAREA": "",
     "LONGITUDE": -80.02420420121388,
     "LATITUDE": 43.2999569455353
@@ -3434,7 +3434,7 @@
     "EMAIL": "",
     "TOLL_FREE": "",
     "URL": "http://www.waterfalls.hamilton.ca/",
-    "DESCRIPTION": "Albion Falls is a Complex Classic Cascade waterfall 19 metres in height. Located at the southernmost tip of King’s Forest Park in Hamilton, its source is Red Hill Creek. Albion Falls enjoys year-round flow.",
+    "DESCRIPTION": "Albion Falls is a Complex Classic Cascade waterfall 19 metres in height. Located at the southernmost tip of King%u2019s Forest Park in Hamilton, its source is Red Hill Creek. Albion Falls enjoys year-round flow.",
     "OPEN_DATATOURISM_LISTINGSAREA": "",
     "LONGITUDE": -79.8198039999998,
     "LATITUDE": 43.20020599999526
@@ -3450,7 +3450,7 @@
     "EMAIL": "",
     "TOLL_FREE": "",
     "URL": "http://www.waterfalls.hamilton.ca/",
-    "DESCRIPTION": "Borer’s Falls is a 15 metre high curtain style waterfall whose source is nearby Borer’s Creek. It is located at the Borer’s Falls Conservation Area in Dundas, and has a year-round flow.",
+    "DESCRIPTION": "Borer%u2019s Falls is a 15 metre high curtain style waterfall whose source is nearby Borer%u2019s Creek. It is located at the Borer%u2019s Falls Conservation Area in Dundas, and has a year-round flow.",
     "OPEN_DATATOURISM_LISTINGSAREA": "",
     "LONGITUDE": -79.93692299999991,
     "LATITUDE": 43.293895999995314
@@ -3466,7 +3466,7 @@
     "EMAIL": "",
     "TOLL_FREE": "",
     "URL": "http://www.waterfalls.hamilton.ca/",
-    "DESCRIPTION": "Devil’s Punchbowl is a ribbon waterfall 37 metres (121 feet) in height and a crest width of 3 metres (10 feet). Located at the Devil’s Punchbowl Conservation Area in Stoney Creek, the area actually contains two separate falls: the Upper Falls is the classical shape, while the Lower is the ribbon type. Known at one time as Horseshoe Falls, it is the third highest waterfall in Hamilton.",
+    "DESCRIPTION": "Devil%u2019s Punchbowl is a ribbon waterfall 37 metres (121 feet) in height and a crest width of 3 metres (10 feet). Located at the Devil%u2019s Punchbowl Conservation Area in Stoney Creek, the area actually contains two separate falls: the Upper Falls is the classical shape, while the Lower is the ribbon type. Known at one time as Horseshoe Falls, it is the third highest waterfall in Hamilton.",
     "OPEN_DATATOURISM_LISTINGSAREA": "",
     "LONGITUDE": -79.75554899999973,
     "LATITUDE": 43.21061099999523
@@ -3482,7 +3482,7 @@
     "EMAIL": "",
     "TOLL_FREE": "",
     "URL": "http://www.waterfalls.hamilton.ca/",
-    "DESCRIPTION": "Felker’s Falls is located on a branch of the Red Hill Creek called Davis Creek. Its height is 22 metres (72 feet) and its crest width is 6 metres (20 feet). It is considered a Terraced Ribbon Falls, and experiences year-round flow. Its GPS coordinates are 17T 0598299 4784147.",
+    "DESCRIPTION": "Felker%u2019s Falls is located on a branch of the Red Hill Creek called Davis Creek. Its height is 22 metres (72 feet) and its crest width is 6 metres (20 feet). It is considered a Terraced Ribbon Falls, and experiences year-round flow. Its GPS coordinates are 17T 0598299 4784147.",
     "OPEN_DATATOURISM_LISTINGSAREA": "",
     "LONGITUDE": -79.79119099999976,
     "LATITUDE": 43.2026849999953
@@ -3498,7 +3498,7 @@
     "EMAIL": "",
     "TOLL_FREE": "",
     "URL": "http://www.waterfalls.hamilton.ca/",
-    "DESCRIPTION": "Tews Falls is a ribbon waterfall 41 metres in height, making it the tallest in Hamilton. Located at the Spencer Gorge / Webster’s Falls Conservation Area in Greensville, its source is Logie’s Creek.",
+    "DESCRIPTION": "Tews Falls is a ribbon waterfall 41 metres in height, making it the tallest in Hamilton. Located at the Spencer Gorge / Webster%u2019s Falls Conservation Area in Greensville, its source is Logie%u2019s Creek.",
     "OPEN_DATATOURISM_LISTINGSAREA": "",
     "LONGITUDE": -79.97829099999993,
     "LATITUDE": 43.28068499999529
@@ -3524,7 +3524,7 @@
     "Y": 4790246.473,
     "OBJECTID": 196,
     "TITLE": "Main West Esplanade Shopping District",
-    "ADDRESS": "Main Street West, between Dundurn and Hess, in the western portion of Hamilton’s Downtown core",
+    "ADDRESS": "Main Street West, between Dundurn and Hess, in the western portion of Hamilton%u2019s Downtown core",
     "PHONE": "905-522-7936",
     "FAX": "",
     "EMAIL": "alaw@pracommercial.com",

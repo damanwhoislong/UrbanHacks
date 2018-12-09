@@ -60,12 +60,12 @@ function findNearby(coordLong, coordLat, r){
 				}
 			}
 			console.log(validLoc);
-			// validLoc.sort((a, b) => (a.dist > b.dist) ? 1 : ((b.dist > a.dist) ? -1 : 0)); // sort by distance
-			validLoc.sort(function(a, b) {
-				if (a.dist > b.dist) return 1;
-				else if (a.dist > b.dist) return -1;
-				else return 0;
-			});
+			validLoc.sort((a, b) => (a.dist > b.dist) ? 1 : ((b.dist > a.dist) ? -1 : 0)); // sort by distance
+			// validLoc.sort(function(a, b) {
+			// 	if (a.dist > b.dist) return 1;
+			// 	else if (a.dist > b.dist) return -1;
+			// 	else return 0;
+			// });
 			console.log(validLoc);
 			console.log(validLoc.length);
 
@@ -79,7 +79,7 @@ function findNearby(coordLong, coordLat, r){
 				var address_cell = row.insertCell(2);
 				var fax_cell = row.insertCell(3);
 				name_cell.innerHTML = POIList[i].name;
-				dist_cell.innerHTML = POIList[i].dist;
+				dist_cell.innerHTML = Math.round(POIList[i].dist * 10)/10.0 + " km";
 				address_cell.innerHTML = POIList[i].address;
 				fax_cell.innerHTML = POIList[i].fax;
 			}
