@@ -17,6 +17,11 @@ img {
 	display: block;
 }
 
+#top-table td, #top-table tr {
+    border-style: hidden;
+    border-width: 0px;
+}
+
 #top-table td {
     vertical-align: top;
 	width: 20%;
