@@ -95,7 +95,7 @@ function findNearby(coordLong, coordLat, r){
 			}
 		}
 	};
-	xmlhttp.open("GET", "http://damanwhoislong.github.io/UrbanHacks/Data/Tourism_Points_of_Interest.json", true);
+	xmlhttp.open("GET", "https://damanwhoislong.github.io/UrbanHacks/Data/Tourism_Points_of_Interest.json", true);
 	xmlhttp.send();
 }
 
