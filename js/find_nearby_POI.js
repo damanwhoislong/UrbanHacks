@@ -70,5 +70,5 @@ function findNearby(coordLong, coordLat){
 	return validLoc;
 }
 
-findNearby(-79.8912813, 43.252307699999996)
+findNearby(-79.8669586, 43.25888889)
 
