@@ -48,7 +48,7 @@ function findNearby(coordLong, coordLat){
                     }
                 }
             }
-            console.log("num crimes: " + validLoc);
+            // console.log("list of locations: \n" + validLoc);
             // document.getElementById("crimeCount").innerHTML = validLoc.length;
 
             //square root value
@@ -67,8 +67,9 @@ function findNearby(coordLong, coordLat){
     };
 	xmlhttp.open("GET", "https://damanwhoislong.github.io/UrbanHacks/Data/Tourism_Points_of_Interest.json", true);
     xmlhttp.send();
-	
+	console.log(validLoc);
+	return validLoc;
 }
 
-findNearby(1,1)
+findNearby(-79.8912813, 43.252307699999996)
 
