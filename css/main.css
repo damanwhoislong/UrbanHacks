@@ -1,16 +1,23 @@
 
-
-
 body {
     background: #E0E0E2;
 	margin: 0;
+    font-family: Arial;
 }
-
+h1 {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+}
 img {
 	margin: 0;
 	width: 100%;
 	padding: 0;
 	display: block;
+}
+
+h2 {
+    text-align: center;
 }
 
 p {
@@ -27,5 +34,9 @@ p {
 }
 
 #header-bottom-left {
-	height: 350px;
+	height: 260px;
+}
+
+th, td {
+    padding: 7px;
 }

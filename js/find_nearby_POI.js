@@ -1,7 +1,7 @@
 var validLoc = []; // all locations within radius
 // find all nearby POI
-var Location = {'latitude': 0.0, 'longitude': 0.0}
-
+var Location = {'latitude': 0.0, 'longitude': 0.0};
+var R = 2;
 // get user location
 function getLocation() {
 	var x = document.getElementById("demo");
@@ -18,7 +18,7 @@ function setPosition(position) {
 	var x = document.getElementById("demo");
 	x.innerHTML = "Latitude: " + Location.latitude + "&#176; N" +
 	"<br/><br/><br/><br/>Longitude: " + -Location.longitude + "&#176; W";
-	findNearby(Location.longitude, Location.latitude, 1.0);
+	findNearby(Location.longitude, Location.latitude, R);
 }
 
 function findNearby(coordLong, coordLat, r){
@@ -81,8 +81,10 @@ function findNearby(coordLong, coordLat, r){
 				name_cell.innerHTML = POIList[i].name;
 				if (POIList[i].dist >= 1.0) {
 					dist_cell.innerHTML = Math.round(POIList[i].dist * 10)/10.0 + " km";
+				} else if (POIList[i].dist >= 0.1){
+					dist_cell.innerHTML = Math.round(POIList[i].dist * 10)*100 + " m";
 				} else {
-					dist_cell.innerHTML = Math.round(POIList[i].dist * 10)*10 + " m";
+					dist_cell.innerHTML = Math.round(POIList[i].dist * 100)*10 + " m";
 				}
 
 				address_cell.innerHTML = POIList[i].address;
