@@ -19,6 +19,7 @@ const {
   dialogflow,
   BasicCard,
   SimpleResponse,
+  Suggestions,
 } = require('actions-on-google');
 const functions = require('firebase-functions');
 const fetch = require('isomorphic-fetch');
@@ -27,6 +28,8 @@ const URL = 'https://raw.githubusercontent.com/damanwhoislong/UrbanHacks/master/
 
 
 const app = dialogflow({debug: true});
+
+let validLoc = [];
 
 // Retrieve data from the external API.
 app.intent('Default Welcome Intent', (conv) => {
@@ -44,7 +47,6 @@ app.intent('Default Welcome Intent', (conv) => {
     .then((json) => {
       // Grab random quote data from JSON.
       const jsonData = json;
-      let validLoc = [];
       let info = [];
       const longCov = 80.00;
       const latCov = 111.045;
@@ -75,7 +77,7 @@ app.intent('Default Welcome Intent', (conv) => {
               'name': info[j].name,
               'dist': dist,
               'address': info[j].address,
-              'fax': info[j].desc});
+              'desc': info[j].desc});
           }
         }
       }
@@ -83,24 +85,35 @@ app.intent('Default Welcome Intent', (conv) => {
       validLoc.sort((a, b) => (a.dist > b.dist) ? 1
       : ((b.dist > a.dist) ? -1 : 0));
 
-      const data = validLoc[0];
-      const title = data.name;
-      const address = data.address;
-      const description = data.fax;
-      conv.close(new SimpleResponse({
-        text: json.info,
-        speech: `The closest Hamiton Point of Interest is ${title},`
-        + ` at ${address}.`,
-      }));
-      if (conv.screen) {
-        conv.close(new BasicCard({
-          text: title,
-          title: `${title}`,
-          text: `Address: ${address} \n` +
-          `Description: ${description}`
-        }));
-      }
+      conv.ask(` Would you like to hear about a nearby` +
+      ` recommended Hamilton Point of Interest?`);
+      conv.ask(new Suggestions('Yes', 'No'));
     });
 });
+
+app.intent(['Default Welcome Intent - yes',
+'Default Welcome Intent - yes - yes'], (conv)=>{
+  const data = validLoc[Math.floor(Math.random() * validLoc.length)];
+  const title = data.name;
+  const address = data.address;
+  const description = data.desc;
+  conv.close(new SimpleResponse({
+    text: `A recommended Hamiton Point of Interest is ${title}`,
+    speech: `A recommended Hamiton Point of Interest is ${title},`
+    + ` at ${address}.`,
+  }));
+  if (conv.screen) {
+    conv.close(new BasicCard({
+      text: title,
+      title: `${title}`,
+      text: `Address: ${address} \n` +
+      `Description: ${description}`,
+    }));
+  }
+
+  conv.ask('Would you like to hear another?');
+  conv.ask(new Suggestions('Yes', 'No'));
+});
+
 
 exports.quotes = functions.https.onRequest(app);
