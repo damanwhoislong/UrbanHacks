@@ -17,7 +17,7 @@ function setPosition(position) {
 	Location.longitude = position.coords.longitude;
 	var x = document.getElementById("demo");
 	x.innerHTML = "Latitude: " + Location.latitude + "&#176; N" +
-	"<br>Longitude: " + -Location.longitude + "&#176; W";
+	"<br/><br/><br/><br/>Longitude: " + -Location.longitude + "&#176; W";
 	findNearby(Location.longitude, Location.latitude, 1.0);
 }
 
