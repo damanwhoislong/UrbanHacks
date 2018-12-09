@@ -1,8 +1,7 @@
-
+var validLoc = []; // all locations within radius
 // find all nearby POI
 function findNearby(coordLong, coordLat, r){
 	var info = [];  // name, long, lat of POI
-	var validLoc = [];  // all locations within radius
 
 	// juicy stuff
 	var xmlhttp = new XMLHttpRequest();
@@ -12,6 +11,7 @@ function findNearby(coordLong, coordLat, r){
 		var latCov = 111.045;
 
 		if (this.readyState == 4 && this.status == 200) {
+			validLoc = [];
 			var jsonData = JSON.parse(this.responseText);
 			for (i = 0; i < jsonData.length; i++) {
 				// append long and lat to coord
@@ -38,13 +38,19 @@ function findNearby(coordLong, coordLat, r){
 					}
 				}
 			}
-			validLoc.sort((a, b) => (a.dist > b.dist) ? 1 : ((b.dist > a.dist) ? -1 : 0)); // sort by distance
+			console.log(validLoc);
+			// validLoc.sort((a, b) => (a.dist > b.dist) ? 1 : ((b.dist > a.dist) ? -1 : 0)); // sort by distance
+			validLoc.sort(function(a, b) {
+				if (a.dist > b.dist) return 1;
+				else if (a.dist > b.dist) return -1;
+				else return 0;
+			});
+			console.log(validLoc);
+			console.log(validLoc.length);
 		}
-
 	};
 	xmlhttp.open("GET", "https://damanwhoislong.github.io/UrbanHacks/Data/Tourism_Points_of_Interest.json", true);
 	xmlhttp.send();
-	return validLoc;
 }
 
-console.log(findNearby(-79.8669586, 43.25888889, 1));
+// console.log(findNearby(-79.8669586, 43.25888889, 1));
