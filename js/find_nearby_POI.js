@@ -1,5 +1,5 @@
-// 1. get location 
-// 2. get coordinates of POI 
+// 1. get location
+// 2. get coordinates of POI
 // 3. return all nearby POI -->
 
 function getLocation() {
@@ -14,16 +14,16 @@ function getLocation() {
 function findNearby(coordLong, coordLat){
     var info = [];  // name, long, lat of POI
     var validLoc = [];  // all locations within radius
-    
+
 	// juicy stuff
 	var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
 		// 1 km radius to search
-		var r = 1;  
+		var r = 1;
 		// long and lat to km conversion
 		var longCov = 80.00;
         var latCov = 111.045;
-		
+
         if (this.readyState == 4 && this.status == 200) {
             var jsonData = JSON.parse(this.responseText);
             for (i = 0; i < jsonData.length; i++) {
@@ -36,7 +36,7 @@ function findNearby(coordLong, coordLat){
 					'fax': jsonData[i].DESCRIPTION
                 });
             }
-			
+
             // Initialize square range
             // Scan thru and save all  points within square range
             for (var i = 0; i < info.length; i++) {
@@ -45,30 +45,20 @@ function findNearby(coordLong, coordLat){
                     info[i].y < coordLat + (r / latCov) &&
                     info[i].y > coordLat - (r / latCov)) {
                     // check if its within the circle
-					var dist = Math.sqrt(Math.pow((info[i].x - coordLong) * longCov, 2) + Math.pow((info[i].y - coordLat) * latCov, 2))
+										var dist = Math.sqrt(Math.pow((info[i].x - coordLong) * longCov, 2) + Math.pow((info[i].y - coordLat) * latCov, 2))
                     if (dist < r) {
-                        validLoc.push([info[i].name, dist, info[i].address, info[i].fax]);
+                        validLoc.push({'name': info[i].name, 'dist': dist, 'address': info[i].address, 'fax': info[i].fax});
                     }
                 }
             }
-
-            //square root value
-            var countvalidLoc = Math.floor(Math.sqrt(validLoc.length) * 10) / 10;
-
-            if (Math.floor(Math.sqrt(validLoc.length) * 10) / 10 > 10) {
-                countvalidLoc = 10;
-
-            }
-            // output to webpage
-        
+						validLoc.sort((a, b) => (a.dist > b.dist) ? 1 : ((b.dist > a.dist) ? -1 : 0));
 		}
 
     };
 	xmlhttp.open("GET", "https://damanwhoislong.github.io/UrbanHacks/Data/Tourism_Points_of_Interest.json", true);
-    xmlhttp.send();
+  xmlhttp.send();
 	console.log(validLoc);
 	return validLoc;
 }
 
 findNearby(-79.8669586, 43.25888889)
-
