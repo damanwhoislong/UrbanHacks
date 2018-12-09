@@ -48,8 +48,6 @@ function findNearby(coordLong, coordLat){
                     }
                 }
             }
-            // console.log("list of locations: \n" + validLoc);
-            // document.getElementById("crimeCount").innerHTML = validLoc.length;
 
             //square root value
             var countvalidLoc = Math.floor(Math.sqrt(validLoc.length) * 10) / 10;
@@ -59,8 +57,6 @@ function findNearby(coordLong, coordLat){
 
             }
             // output to webpage
-            // document.getElementById("crimeRatingText").innerHTML = countvalidLoc + "/10";
-			// document.getElementById("scale").style.width = countvalidLoc * 10 + "%";
         
 		}
 
