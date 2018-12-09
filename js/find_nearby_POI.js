@@ -45,7 +45,7 @@ function findNearby(coordLong, coordLat){
                     info[i].y < coordLat + (r / latCov) &&
                     info[i].y > coordLat - (r / latCov)) {
                     // check if its within the circle
-					var dist = Math.sqrt(Math.pow(info[i].x - coordLong, 2) + Math.pow(info[i].y - coordLat, 2))
+					var dist = Math.sqrt(Math.pow((info[i].x - coordLong) * longCov, 2) + Math.pow((info[i].y - coordLat) * latCov, 2))
                     if (dist < r) {
                         validLoc.push([info[i].name, dist, info[i].address, info[i].fax]);
                     }
