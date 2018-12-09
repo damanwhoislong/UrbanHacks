@@ -2,12 +2,13 @@
 body {
     background: #E0E0E2;
 	margin: 0;
-    font-family: Arial;
+    font-family: 'Source Sans Pro';
 }
 h1 {
-    font-size: 3em;
+    font-size: 3.2em;
     font-weight: bold;
     text-align: center;
+	font-family: 'Source Sans Pro';
 }
 img {
 	margin: 0;
@@ -18,6 +19,7 @@ img {
 
 #top-table td {
     vertical-align: top;
+	width: 20%;
 }
 
 h2 {
