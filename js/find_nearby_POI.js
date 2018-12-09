@@ -11,58 +11,61 @@ function getLocation() {
 }
 
 // find all nearby POI
-function findNearby(coordLat, coordLong){
+function findNearby(coordLong, coordLat){
     var info = [];  // name, long, lat of POI
-	var r = 1;  // 1 km radius to search
-    var squareRange = [];  // square r km away
+    var validLoc = [];  // all locations within radius
     
 	// juicy stuff
 	var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
+
+		var r = 1;  // 1 km radius to search
+		// long and lat to km conversion
+		var longCov = 80.00;
+        var latCov = 111.045;
+		
         if (this.readyState == 4 && this.status == 200) {
             var jsonData = JSON.parse(this.responseText);
             for (i = 0; i < jsonData.length; i++) {
                 // append long and lat to coord
 				info.push({
-					'name': jsonData.features[i].TITLE
-                    'long': jsonData.features[i].LONGITUDE,
-                    'lat': jsonData.features[i].LATITUDE
+					'name': jsonData[i].TITLE,
+                    'x': jsonData[i].LONGITUDE,
+                    'y': jsonData[i].LATITUDE
                 });
             }
-
+			
             // Initialize square range
             // Scan thru and save all  points within square range
             for (var i = 0; i < info.length; i++) {
-                if (info[i].x < curLoc[0] + (r / longCov) &&
-                    info[i].x > curLoc[0] - (r / longCov) &&
-                    info[i].y < curLoc[1] + (r / latCov) &&
-                    info[i].y > curLoc[1] - (r / latCov)) {
-                    //converts the square into a circle :D
-                    if (Math.pow(info[i].x - curLoc[0], 2) + Math.pow(info[i].y - curLoc[1], 2) <= Math.pow(r, 2)) {
-                        squareRange.push([info[i].x, info[i].y]);
+                if (info[i].x < coordLong + (r / longCov) &&
+                    info[i].x > coordLong - (r / longCov) &&
+                    info[i].y < coordLat + (r / latCov) &&
+                    info[i].y > coordLat - (r / latCov)) {
+                    // check if its within the circle
+                    if (Math.pow(info[i].x - coordLong, 2) + Math.pow(info[i].y - coordLat, 2) <= Math.pow(r, 2)) {
+                        validLoc.push([info[i].name, info[i].x, info[i].y]);
                     }
                 }
             }
-            console.log("num crimes: " + squareRange);
-            document.getElementById("crimeCount").innerHTML = squareRange.length;
+            console.log("num crimes: " + validLoc);
+            // document.getElementById("crimeCount").innerHTML = validLoc.length;
 
             //square root value
-            var countSquareRange = Math.floor(Math.sqrt(squareRange.length) * 10) / 10;
+            var countvalidLoc = Math.floor(Math.sqrt(validLoc.length) * 10) / 10;
 
-            if (Math.floor(Math.sqrt(squareRange.length) * 10) / 10 > 10) {
-                countSquareRange = 10;
+            if (Math.floor(Math.sqrt(validLoc.length) * 10) / 10 > 10) {
+                countvalidLoc = 10;
 
             }
             // output to webpage
-            document.getElementById("crimeRatingText").innerHTML = countSquareRange + "/10";
-
-            document.getElementById("scale").style.width = countSquareRange * 10 + "%";
-        }
-
-        findDirection(squareRange, curLoc, latCov, longCov, r);
+            // document.getElementById("crimeRatingText").innerHTML = countvalidLoc + "/10";
+			// document.getElementById("scale").style.width = countvalidLoc * 10 + "%";
+        
+		}
 
     };
-	xmlhttp.open("GET", "https://burntpotatoes.github.io/safety-way/Crime%20Data/CrimeData.json", true);
+	xmlhttp.open("GET", "https://damanwhoislong.github.io/UrbanHacks/Data/Tourism_Points_of_Interest.json", true);
     xmlhttp.send();
 	
 }
